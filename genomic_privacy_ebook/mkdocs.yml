@@ -8,11 +8,12 @@ theme: mkdocs # 'readthedocs' is another popular choice
 nav:
   - 'Home': 'README.md'
   - 'Chapter 1: Introduction': 'chapters/01-introduction.md'
-  - 'Chapter 2: PETs Overview': 'chapters/02-privacy_technologies.md'
-  - 'Chapter 3: Zero-Knowledge Proofs': 'chapters/03-zkps.md'
-  - 'Chapter 4: Homomorphic Encryption': 'chapters/04-fhe.md'
-  - 'Chapter 5: Applications': 'chapters/05-applications.md'
-  - 'Chapter 6: Challenges & Future': 'chapters/06-challenges_future.md'
+  - 'Chapter 2: Public Genome Datasets & File Formats': 'chapters/02-public_genome_datasets.md'
+  - 'Chapter 3: PETs Overview': 'chapters/02-privacy_technologies.md'
+  - 'Chapter 4: Zero-Knowledge Proofs': 'chapters/03-zkps.md'
+  - 'Chapter 5: Homomorphic Encryption': 'chapters/04-fhe.md'
+  - 'Chapter 6: Applications': 'chapters/05-applications.md'
+  - 'Chapter 7: Challenges & Future': 'chapters/06-challenges_future.md'
 
 # Optional: Add plugins if needed later, e.g., for search
 # plugins:
