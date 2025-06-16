@@ -11,19 +11,19 @@ The past few decades have witnessed an explosion in the generation of genomic da
 A cornerstone of public genomic data accessibility is the work of international consortia that coordinate data submission, storage, and dissemination.
 
 *   **INSDC (International Nucleotide Sequence Database Collaboration)**:
-    The INSDC is a long-standing collaboration between three major public sequence repositories. Its primary role is to ensure that sequence data is freely available and that data submitted to any one of the member databases is shared among all three. This global effort prevents data fragmentation and provides a comprehensive, unified collection of nucleotide sequence information.
+    The INSDC is a long-standing collaboration between three major public sequence repositories. Its primary role is to ensure that sequence data is freely available and that data submitted to any one of the member databases is shared among all three. This global effort prevents data fragmentation and provides a comprehensive, unified collection of nucleotide sequence information. Data is accessible through its members' portals.
     *   **GenBank (NCBI - National Center for Biotechnology Information, USA)**:
         *   **Scope:** GenBank is a comprehensive public database of nucleotide sequences and their protein translations. It includes sequences submitted directly by researchers, as well as data from large-scale sequencing projects. Data types include DNA, RNA, and protein sequences, along with rich metadata such as source organism, collection date, experimental information, and publications.
-        *   **Access:** Data can be accessed through the NCBI Entrez system, the NCBI Datasets portal (a newer interface for downloading sequence data and metadata), and via FTP for bulk downloads. Tools like BLAST allow sequence similarity searching against GenBank.
+        *   **Access:** Data can be accessed through the NCBI Entrez system, the NCBI Datasets portal, its main portal ([https://www.ncbi.nlm.nih.gov/genbank/](https://www.ncbi.nlm.nih.gov/genbank/)), and via FTP for bulk downloads. Tools like BLAST allow sequence similarity searching against GenBank.
     *   **ENA (European Nucleotide Archive, EMBL-EBI - European Molecular Biology Laboratory-European Bioinformatics Institute)**:
         *   **Scope:** ENA provides a comprehensive record of the world's nucleotide sequencing information, covering raw sequencing data, assembled sequences, and functional annotation. It accepts data from small-scale experiments to large genome-sequencing projects. Data types are similar to GenBank, including reads, sequences, and associated metadata.
-        *   **Access:** Data is accessible through the EMBL-EBI website via search tools, web services (APIs), and FTP for bulk downloads. ENA also provides tools for data submission and retrieval.
+        *   **Access:** Data is accessible through the EMBL-EBI website ([https://www.ebi.ac.uk/ena](https://www.ebi.ac.uk/ena)) via search tools, web services (APIs), and FTP for bulk downloads. ENA also provides tools for data submission and retrieval.
     *   **DDBJ (DNA Data Bank of Japan, National Institute of Genetics)**:
         *   **Scope:** DDBJ collects nucleotide sequence data primarily from Japanese researchers but also from other international contributors. It mirrors the data available in GenBank and ENA, ensuring global data synchronization.
-        *   **Access:** Data can be accessed through web-based search tools, APIs, and FTP.
+        *   **Access:** Data can be accessed through web-based search tools ([https://www.ddbj.nig.ac.jp/index-e.html](https://www.ddbj.nig.ac.jp/index-e.html)), APIs, and FTP.
 
 *   **Ensembl (EMBL-EBI & Wellcome Sanger Institute)**:
-    Ensembl focuses on providing high-quality, automatically annotated genomes, primarily for vertebrate species but also expanding to other life forms. Its key role is in genome annotation, including gene prediction, regulatory elements, and comparative genomics. Ensembl integrates data from various sources, including INSDC databases, and provides tools for data visualization (e.g., Ensembl Genome Browser) and analysis. It's a crucial resource for researchers studying gene function, evolution, and genetic variation. Data is accessible via its website, BioMart data mining tool, REST APIs, and FTP.
+    Ensembl focuses on providing high-quality, automatically annotated genomes, primarily for vertebrate species but also expanding to other life forms. Its key role is in genome annotation, including gene prediction, regulatory elements, and comparative genomics. Ensembl integrates data from various sources, including INSDC databases, and provides tools for data visualization (e.g., Ensembl Genome Browser) and analysis. It's a crucial resource for researchers studying gene function, evolution, and genetic variation. Data is accessible via its main portal ([https://www.ensembl.org/](https://www.ensembl.org/)), BioMart data mining tool, REST APIs, and FTP.
 
 ### Specific Large-Scale Projects/Databases
 
@@ -32,26 +32,33 @@ Beyond the primary INSDC repositories, numerous large-scale projects have genera
 *   **1000 Genomes Project:**
     *   **Scope & Focus:** Completed in 2015, this landmark project aimed to create a detailed catalog of human genetic variation (SNPs, indels, structural variants) from diverse populations worldwide.
     *   **Data Types:** Whole-genome sequencing data, exome sequencing data, and genotype data for over 2,500 individuals.
-    *   **Access:** Data is available through INSDC archives (ENA, GenBank, DDBJ), the International Genome Sample Resource (IGSR) portal, and cloud platforms like Amazon S3.
+    *   **Access:** Data is available through INSDC archives (ENA, GenBank, DDBJ), the International Genome Sample Resource (IGSR) portal ([https://www.internationalgenome.org/](https://www.internationalgenome.org/)), and cloud platforms like Amazon S3.
 
 *   **TCGA (The Cancer Genome Atlas):**
     *   **Scope & Focus:** A comprehensive project to understand the molecular basis of cancer through large-scale genome sequencing and multi-omic analysis of over 30 different types of cancer.
     *   **Data Types:** Genomic (WGS, WES), epigenomic (DNA methylation), transcriptomic (RNA-Seq), and proteomic data, along with clinical information.
-    *   **Access:** TCGA data is now part of the Genomic Data Commons (GDC) portal. Access to controlled-access data (containing potentially identifiable information) requires authorization (e.g., via dbGaP).
+    *   **Access:** TCGA data is now part of the Genomic Data Commons (GDC) portal ([https://portal.gdc.cancer.gov/](https://portal.gdc.cancer.gov/)). Access to controlled-access data (containing potentially identifiable information) requires authorization (e.g., via dbGaP).
 
 *   **UK Biobank:**
     *   **Scope & Focus:** A prospective cohort study with deep genetic and health information from half a million UK participants. It aims to improve the prevention, diagnosis, and treatment of a wide range of serious and life-threatening illnesses.
     *   **Data Types:** Genotyping array data, exome sequencing data (for a subset), whole-genome sequencing data (planned for all), extensive health records, lifestyle information, and imaging data.
-    *   **Access:** Data is available to approved researchers for health-related research in the public interest. Applications are made through the UK Biobank Access Management System.
+    *   **Access:** Data is available to approved researchers for health-related research in the public interest. Applications are made through the UK Biobank Access Management System ([https://www.ukbiobank.ac.uk/enable-your-research/](https://www.ukbiobank.ac.uk/enable-your-research/)).
 
 *   **gnomAD (Genome Aggregation Database):**
     *   **Scope & Focus:** Aggregates exome and genome sequencing data from a wide variety of large-scale sequencing projects and diverse populations, with a strong focus on removing individuals with severe pediatric diseases. It serves as a powerful reference for allele frequencies in the general population.
     *   **Data Types:** Allele frequencies, genotype counts, and summary statistics for millions of genetic variants.
-    *   **Access:** Data is publicly accessible through the gnomAD browser and for bulk download.
+    *   **Access:** Data is publicly accessible through the gnomAD browser ([https://gnomad.broadinstitute.org/](https://gnomad.broadinstitute.org/)) and for bulk download.
+
+*   **Simons Genome Diversity Project (SGDP):**
+    *   **Scope & Focus:** A project aimed at studying genetic diversity across a wide range of human populations. It provides a valuable resource for understanding human evolutionary history, migration patterns, and genetic adaptation.
+    *   **Data Types:** Includes high-quality whole-genome sequencing data from hundreds of individuals representing diverse geographically and genetically distinct populations.
+    *   **Access:** Data is available through repositories such as the European Variation Archive (EVA) and the European Nucleotide Archive (ENA). The primary EVA study accession is PRJEB9586. ([https://www.ebi.ac.uk/eva/?eva-study=PRJEB9586](https://www.ebi.ac.uk/eva/?eva-study=PRJEB9586))
 
 *   **Other Notable Resources:**
     *   **GEO (Gene Expression Omnibus, NCBI):** A public functional genomics data repository supporting MIAME-compliant data submissions. Stores high-throughput gene expression data (e.g., microarray, RNA-Seq), methylation, and ChIP-seq data.
+        *   **Access:** [https://www.ncbi.nlm.nih.gov/geo/](https://www.ncbi.nlm.nih.gov/geo/)
     *   **SRA (Sequence Read Archive, part of INSDC):** The primary archive for raw next-generation sequencing data. While part of INSDC, it's worth noting specifically due to the sheer volume of raw data it holds.
+        *   **Access:** [https://www.ncbi.nlm.nih.gov/sra](https://www.ncbi.nlm.nih.gov/sra)
 
 ### General Access Mechanisms
 
