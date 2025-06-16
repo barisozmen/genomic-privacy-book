@@ -1,0 +1,25 @@
+site_name: Genomic Privacy with ZKPs & FHE
+site_description: An e-book on keeping genomic data private and doing private computations on them with a focus on zero knowledge proofs and fully homomorphic encryption.
+# site_author: AI E-book Creator (Jules) # Optional
+# repo_url: <link_to_your_repo_if_any> # Optional
+
+theme: mkdocs # 'readthedocs' is another popular choice
+
+nav:
+  - 'Home': 'README.md'
+  - 'Chapter 1: Introduction': 'chapters/01-introduction.md'
+  - 'Chapter 2: PETs Overview': 'chapters/02-privacy_technologies.md'
+  - 'Chapter 3: Zero-Knowledge Proofs': 'chapters/03-zkps.md'
+  - 'Chapter 4: Homomorphic Encryption': 'chapters/04-fhe.md'
+  - 'Chapter 5: Applications': 'chapters/05-applications.md'
+  - 'Chapter 6: Challenges & Future': 'chapters/06-challenges_future.md'
+
+# Optional: Add plugins if needed later, e.g., for search
+# plugins:
+#   - search
+
+# Optional: Markdown extensions
+# markdown_extensions:
+#   - toc:
+#       permalink: true # Adds anchor links to headings
+#   - admonition # Adds support for admonition blocks like !!! note
