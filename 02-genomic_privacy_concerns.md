@@ -4,6 +4,26 @@
 
 Genomic data differs from other health information—it is **inherently identifiable** (DNA is unique), **predictive & familial** (reveals predispositions for individuals and relatives), and **immutable** (cannot be changed if compromised). Even aggregated allele frequency analysis can become a privacy vector under certain conditions.
 
+
+## Key Risk Amplification Factors
+
+1. **Rare Diseases/Variants** (<1% frequency): Narrow identification pools, especially in small/isolated populations
+2. **High Penetrance & Actionable Conditions**: Strong disease likelihood + required interventions = high stakes
+3. **Stigmatized Conditions**: Mental health, infectious disease predispositions increase discrimination risks
+4. **Population-Specific Variants**: Ethnic/geographic markers enable group-level identification and targeting
+5. **Data Context**: Small cohorts, rare disease datasets, linkable metadata amplify re-identification risks
+
+## High-Risk Disease Categories
+
+| **Category** | **Examples** | **Key Risks** |
+|:-------------|:-------------|:---------------|
+| **Hereditary Cancer** | BRCA1/2, Lynch syndrome | Rare, actionable, insurance discrimination |
+| **Rare Monogenic** | Cystic fibrosis, Huntington's, SMA | Carrier inference, community stigma, lifelong impact |
+| **Neurodegenerative** | Alzheimer's (APOE ε4), Parkinson's (LRRK2) | Late-onset psychological harm, population-specific variants |
+| **Mental Health** | Schizophrenia, bipolar disorder | High stigma, group discrimination potential |
+| **Pharmacogenomic** | HLA-B*57:01, CYP2C19 variants | Indirect health status revelation, treatment implications |
+| **Ethnic-Specific** | Sickle cell, Tay-Sachs, β-thalassemia | Group stigmatization, targeted breaches |
+
 ## Allele Frequency Analysis: High-Stakes Examples
 
 ### APOE ε4 and Alzheimer's Disease
@@ -51,25 +71,6 @@ Genomic data differs from other health information—it is **inherently identifi
 
 
 
-
-## Key Risk Amplification Factors
-
-1. **Rare Diseases/Variants** (<1% frequency): Narrow identification pools, especially in small/isolated populations
-2. **High Penetrance & Actionable Conditions**: Strong disease likelihood + required interventions = high stakes
-3. **Stigmatized Conditions**: Mental health, infectious disease predispositions increase discrimination risks
-4. **Population-Specific Variants**: Ethnic/geographic markers enable group-level identification and targeting
-5. **Data Context**: Small cohorts, rare disease datasets, linkable metadata amplify re-identification risks
-
-## High-Risk Disease Categories
-
-| **Category** | **Examples** | **Key Risks** |
-|:-------------|:-------------|:---------------|
-| **Hereditary Cancer** | BRCA1/2, Lynch syndrome | Rare, actionable, insurance discrimination |
-| **Rare Monogenic** | Cystic fibrosis, Huntington's, SMA | Carrier inference, community stigma, lifelong impact |
-| **Neurodegenerative** | Alzheimer's (APOE ε4), Parkinson's (LRRK2) | Late-onset psychological harm, population-specific variants |
-| **Mental Health** | Schizophrenia, bipolar disorder | High stigma, group discrimination potential |
-| **Pharmacogenomic** | HLA-B*57:01, CYP2C19 variants | Indirect health status revelation, treatment implications |
-| **Ethnic-Specific** | Sickle cell, Tay-Sachs, β-thalassemia | Group stigmatization, targeted breaches |
 
 ## Privacy-Enhancing Strategies
 
