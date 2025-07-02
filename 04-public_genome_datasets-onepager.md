@@ -3,31 +3,36 @@
 ## The Data Goldmine: Scale and Scope
 
 ### Flagship Datasets (The Heavy Hitters)
-**1000 Genomes Project**: The foundation layer
+**1000 Genomes Project**: The foundation layer ([internationalgenome.org](https://www.internationalgenome.org/))
 - 2,500+ individuals, global populations
 - Comprehensive variant catalog (SNPs, indels, SVs)
 - **Impact**: Reference standard for human genetic variation
 
-**UK Biobank**: The clinical jackpot  
+**UK Biobank**: The clinical jackpot ([ukbiobank.ac.uk](https://www.ukbiobank.ac.uk/enable-your-research/))
 - 500K participants with deep phenotyping
 - Genotyping + health records + lifestyle data
 - **Value**: Largest consented population cohort for research
 
-**gnomAD**: The frequency reference
+**gnomAD**: The frequency reference ([gnomad.broadinstitute.org](https://gnomad.broadinstitute.org/))
 - Aggregated exome/genome data from diverse populations
 - **Critical Function**: Population allele frequencies for variant interpretation
 
-**TCGA**: The cancer atlas
+**TCGA**: The cancer atlas ([portal.gdc.cancer.gov](https://portal.gdc.cancer.gov/))
 - 30+ cancer types with multi-omic data
 - **Application**: Precision oncology development
 
 ### The Infrastructure: Who Hosts the World's Genomes
 
 **INSDC Trilogy** (The Global Backbone):
-- **GenBank (NCBI)**: US repository
-- **ENA (EMBL-EBI)**: European archive  
-- **DDBJ**: Japan's database
+- **GenBank (NCBI)**: US repository ([ncbi.nlm.nih.gov/genbank](https://www.ncbi.nlm.nih.gov/genbank/))
+- **ENA (EMBL-EBI)**: European archive ([ebi.ac.uk/ena](https://www.ebi.ac.uk/ena))
+- **DDBJ**: Japan's database ([ddbj.nig.ac.jp](https://www.ddbj.nig.ac.jp/index-e.html))
 - **Key Insight**: Synchronized mirrors ensure global accessibility
+
+**Other Key Resources**:
+- **Ensembl**: Genome annotation & browsers ([ensembl.org](https://www.ensembl.org/))
+- **GEO**: Functional genomics data ([ncbi.nlm.nih.gov/geo](https://www.ncbi.nlm.nih.gov/geo/))
+- **SRA**: Raw sequencing reads archive ([ncbi.nlm.nih.gov/sra](https://www.ncbi.nlm.nih.gov/sra))
 
 **Access Patterns**:
 - **Open Access**: Reference genomes, population frequencies
@@ -43,18 +48,60 @@ FASTQ → SAM/BAM → VCF
 ```
 
 **FASTQ**: Raw sequencing reads + quality scores
+- **Structure**: 4 lines per read (ID, sequence, +, quality)
+- **Example**:
+```
+@READ_001
+ATGCGATCGATCGATCGATC
++
+IIIIIIIIIIIIIIIIIIII
+```
 - **Reality**: Massive files (100GB+ per genome)
 - **Challenge**: Quality control, storage, transfer
 
 **SAM/BAM**: Aligned reads to reference genome
-- **SAM**: Human-readable text
+- **SAM**: Human-readable text (11 mandatory fields)
+- **Example**: `READ_001 0 chr1 1000 60 20M * 0 0 ATGCGATCGATCGATCGATC IIIIIIIIIIIIIIIIIIII`
 - **BAM**: Compressed binary (production standard)
 - **CRAM**: Ultra-compressed (reference-dependent)
 
 **VCF**: The variant standard
-- **Content**: SNPs, indels, structural variants
-- **Critical Fields**: Position, reference/alt alleles, genotype, quality
-- **Challenge**: Annotation complexity, standardization across callers
+- **Structure**: Header + 8 mandatory columns + sample data
+- **Basic Example**:
+```
+#CHROM POS ID  REF ALT QUAL FILTER INFO     FORMAT SAMPLE1
+chr1   1000 .  A   G   100  PASS   DP=50    GT:DP  0/1:50
+chr1   2000 .  AT  A   80   PASS   DP=40    GT:DP  1/1:40
+```
+
+**Variant Types in VCF**:
+- **SNP**: `REF=A, ALT=G` (single base change)
+- **Insertion**: `REF=A, ALT=ATG` (bases added)
+- **Deletion**: `REF=ATG, ALT=A` (bases removed)
+- **Structural**: `ALT=<DEL>` (large variants)
+
+**VCF Fields Decoded**:
+- **GT**: Genotype (0/0=homozygous ref, 0/1=heterozygous, 1/1=homozygous alt)
+- **DP**: Read depth at position
+- **AF**: Allele frequency in population
+- **QUAL**: Phred-scaled quality score
+
+**Advanced Format Examples**:
+
+*FASTA Reference*:
+```
+>chr1 Homo sapiens chromosome 1
+ATGCGATCGATCGATCGATCGATCGATCG
+GCTAGCTAGCTAGCTAGCTAGCTAGCTAG
+```
+
+*Complex VCF with Population Data*:
+```
+##fileformat=VCFv4.2
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele Frequency">
+#CHROM POS ID      REF ALT QUAL FILTER INFO      FORMAT  EUR AFR EAS
+chr1   1000 rs123  A   G   100  PASS   AF=0.15   GT:AF   0/1:0.12 0/0:0.05 1/1:0.30
+```
 
 ### The Storage Economics
 **Cost Drivers**:
