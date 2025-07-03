@@ -69,6 +69,7 @@ Genomic data differs from other health information—it is **inherently identifi
 
 **Regulatory Reality**: Current frameworks fail to address population-specific high-penetrance variants with ethnic stratification patterns.
 
+Beyond preventing misuse, robust genomic privacy unlocks significant positive potential. Widespread, proactive genetic screening for preventable or manageable conditions could become a public health norm if individuals trust that their data will remain secure and under their control. The fear of data exposure currently limits participation in beneficial research and the adoption of personalized preventative strategies.
 
 ## Bottom Line
 
@@ -92,3 +93,7 @@ Genomic innovation requires balancing discovery with discretion. Privacy isn't t
 [^7^]: **Fortea, J. et al.** "APOE4 homozygosity represents a distinct genetic form of Alzheimer's disease." _Nature Medicine_ 30, 1284–1291 (2024). - demonstrates near-complete penetrance and predictable disease course in APOE4/4 individuals.
 
 [^8^]: **Cancer.gov & Nature Genetics**. BRCA1/2 founder mutations in Ashkenazi Jewish population - 185delAG (~1%), 5382insC, 6174delT mutations with 60-85% breast cancer penetrance and population-specific frequencies.
+
+---
+*Previous: [Chapter 1: Introduction](01-introduction.md)*
+*Next: [Chapter 3: Privacy-Enhancing Technologies Overview](03-privacy_technologies.md)*

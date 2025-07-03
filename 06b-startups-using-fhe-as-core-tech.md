@@ -2,6 +2,8 @@
 
 *How venture capital is betting big on fully homomorphic encryption's transition from research curiosity to billion-dollar market opportunity*
 
+*Author's Note: The FHE startup ecosystem is highly dynamic. This chapter reflects the landscape as of mid-2024. New companies, funding rounds, and technological pivots occur frequently. Readers are encouraged to consult current market analyses for the latest developments.*
+
 The venture capital world has discovered its next obsession: fully homomorphic encryption. What started as an academic breakthrough in Craig Gentry's 2009 dissertation has evolved into a feeding frenzy of startup investments, with VCs from Sequoia's orbit to Intel Capital writing checks for companies promising to unlock the "$54B confidential computing opportunity."[¹](#ref1)
 
 The thesis is compelling: enable computation on encrypted data without ever decrypting it. The reality? A complex ecosystem of startups attacking different angles of an extraordinarily difficult technical challenge.
@@ -134,3 +136,7 @@ The question isn't whether FHE will transform computing—it's which approach wi
 <div id="ref10">[10] Davis Treybig, "Developer-first secure computation," Innovation Endeavors, May 2022. <a href="https://medium.com/innovationendeavors/developer-first-secure-computation-a35b57015a90">Medium</a></div>
 
 <div id="ref11">[11] Michael Hughes, "Apple's FHE Announcement: Privacy-led Growth Has Begun," Duality Technologies, August 2024. <a href="https://dualitytech.com/blog/apples-fhe-announcement-privacy-led-growth-has-begun/">Duality Technologies</a></div>
+
+---
+*Previous: [Chapter 6a: Mathematical Foundations of HE](06a-homomorhic_encryption_math_foundations.md)*
+*Next: [Chapter 7: Applications of ZKPs and FHE in Genomics](07-applications.md)*
