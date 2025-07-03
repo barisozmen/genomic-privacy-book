@@ -6,6 +6,25 @@
 
 **Mental Model**: Give someone a locked box with your data inside. They manipulate the box (add numbers, run algorithms) without ever opening it. Hand you back a locked box with the results.
 
+## Historical Development: From Mathematical Curiosity to Practical Reality
+
+### The Foundation Era (1978-2009)
+**1978**: [RSA multiplicative homomorphism](https://people.csail.mit.edu/rivest/Rsapaper.pdf) (Rivest, Shamir, Adleman) - first partially homomorphic scheme
+**1982**: [Goldwasser-Micali probabilistic encryption](https://people.csail.mit.edu/silvio/Selected%20Scientific%20Papers/Probabilistic%20Encryption/Probabilistic_Encryption.pdf) (Goldwasser, Micali) - additive homomorphism
+**1985**: [ElGamal encryption](https://caislab.kaist.ac.kr/lecture/2010/spring/cs548/basic/B02.pdf) (ElGamal) - multiplicative homomorphism
+**1999**: [Paillier cryptosystem](https://www.cs.tau.ac.il/~fiat/crypt07/papers/Pai99pai.pdf) (Paillier) - additive homomorphism
+
+### The Breakthrough Era (2009-2012)
+**2009**: [Gentry's first FHE scheme](https://crypto.stanford.edu/craig/craig-thesis.pdf) (Gentry) - used ideal lattices, bootstrapping
+**2010**: [DGHV over-the-integers](https://eprint.iacr.org/2009/616.pdf) (van Dijk, Gentry, Halevi, Vaikuntanathan) - simpler construction
+**2011**: [BGV scheme](https://eprint.iacr.org/2011/277.pdf) (Brakerski, Gentry, Vaikuntanathan) - Ring-LWE based
+**2012**: [BFV scheme](https://eprint.iacr.org/2012/078.pdf) (Brakerski, Fan, Vercauteren) - scale-invariant
+
+### The Optimization Era (2014-present)
+**2014**: [FHEW](https://eprint.iacr.org/2014/816.pdf) (Ducas, Micciancio) - fast bootstrapping (<1 second)
+**2016**: [CKKS scheme](https://eprint.iacr.org/2016/421.pdf) (Cheon, Kim, Kim, Song) - approximate arithmetic for ML
+**2016**: [TFHE](https://eprint.iacr.org/2016/870.pdf) (Chillotti, Gama, Georgieva, Izabachène) - ultra-fast bootstrapping
+
 ## The Technical Evolution: From Impossible to Inevitable
 
 ### The Three Generations
@@ -30,6 +49,29 @@
 - Homomorphically evaluate the decryption function itself
 - Reduces noise without actually decrypting
 - **Cost**: Computationally expensive but enables unlimited computation
+
+## Under the Hood: The Math That Makes It Work
+
+### Simple Somewhat-HE Construction (Gentry's Integer-Based Approach)
+**Secret Key**: Large prime p (hundreds of digits)
+**Encryption**: `enc(m) = R * p + r * 2 + m` where R is large random, r is small random
+**Decryption**: `dec(ct) = (ct mod p) mod 2`
+
+**Homomorphic Properties**:
+- Addition: `enc(a) + enc(b) = enc(a + b)`
+- Multiplication: `enc(a) * enc(b) = enc(a * b)`
+
+**The Insight**: Arithmetic operations on ciphertexts mirror operations on plaintexts, but noise grows quadratically with multiplication depth.
+
+### Bootstrapping: The Noise Refresh Miracle
+**Core Innovation**: Homomorphically evaluate the decryption function to reduce noise without decrypting.
+**Process**: Convert noisy ciphertext under key K₁ to fresh ciphertext under key K₂
+**Cost**: Computationally intensive but enables unlimited computation depth
+
+### Matrix-Based Approaches (GSW and Beyond)
+**Key Insight**: Instead of scalar ciphertexts, use matrix representations where k * CT = m * k + e
+**Advantage**: Better noise control, more efficient operations
+**Modern Implementation**: TFHE uses this for sub-100ms bootstrapping
 
 ## Genomics Applications: Privacy-Preserving Cloud Computing
 
@@ -111,10 +153,50 @@
 - Performance must reach practical thresholds
 
 **Competitive Risk**: Moderate
-- First-mover advantages in performance optimization
 - Network effects in platform adoption
 
 **Bottom Line**: FHE enables "outsourced computation without outsourced trust." For genomics, this unlocks cloud-scale analysis power while keeping the most sensitive human data encrypted. The company that cracks the performance puzzle wins the privacy-preserving cloud genomics market.
 
 ---
 *FHE doesn't just protect data at rest or in transit—it protects data in use.* 
+
+## References
+
+### Overviews
+- **Vitalik Buterin**: "Exploring Fully Homomorphic Encryption" (2020) - https://vitalik.eth.limo/general/2020/07/20/homomorphic.html
+- **Blog**: "Private information retrieval using homomorphic encryption (explained from scratch)" - https://blintzbase.com/posts/pir-and-fhe-from-scratch/
+- **Blog**: "A High-Level Technical Overview of Fully Homomorphic Encryption" - https://www.jeremykun.com/2024/05/04/fhe-overview/
+- **Wikipedia**: "History of Cryptography" - https://en.wikipedia.org/wiki/History_of_cryptography
+- **Wikipedia**: "Timeline of Cryptography" - https://en.wikipedia.org/wiki/Timeline_of_cryptography
+
+### Historical Papers and Schemes
+
+#### Foundation Era (1978-2009)
+- **Rivest, Shamir, Adleman (1978)**: "A Method for Obtaining Digital Signatures and Public-Key Cryptosystems" - https://people.csail.mit.edu/rivest/Rsapaper.pdf
+- **Goldwasser, Micali (1982)**: "Probabilistic Encryption & How to Play Mental Poker Keeping Secret All Partial Information" - https://people.csail.mit.edu/silvio/Selected%20Scientific%20Papers/Probabilistic%20Encryption/Probabilistic_Encryption.pdf
+- **ElGamal (1985)**: "A Public Key Cryptosystem and a Signature Scheme Based on Discrete Logarithms" - https://caislab.kaist.ac.kr/lecture/2010/spring/cs548/basic/B02.pdf
+- **Paillier (1999)**: "Public-Key Cryptosystems Based on Composite Degree Residuosity Classes" - https://www.cs.tau.ac.il/~fiat/crypt07/papers/Pai99pai.pdf
+
+#### Breakthrough Era (2009-2012)
+- **Gentry (2009)**: "Fully Homomorphic Encryption Using Ideal Lattices" - https://crypto.stanford.edu/craig/craig-thesis.pdf
+- **van Dijk, Gentry, Halevi, Vaikuntanathan (2010)**: "Fully Homomorphic Encryption over the Integers" - https://eprint.iacr.org/2009/616.pdf
+- **Brakerski, Gentry, Vaikuntanathan (2011)**: "Fully Homomorphic Encryption from Ring-LWE and Security for Key Dependent Messages" - https://eprint.iacr.org/2011/277.pdf
+- **Brakerski, Fan, Vercauteren (2012)**: "Somewhat Practical Fully Homomorphic Encryption" - https://eprint.iacr.org/2012/078.pdf
+
+#### Optimization Era (2014-present)
+- **Ducas, Micciancio (2014)**: "FHEW: Bootstrapping Homomorphic Encryption in Less Than a Second" - https://eprint.iacr.org/2014/816.pdf
+- **Cheon, Kim, Kim, Song (2016)**: "Homomorphic Encryption for Arithmetic of Approximate Numbers" - https://eprint.iacr.org/2016/421.pdf
+- **Chillotti, Gama, Georgieva, Izabachène (2016)**: "Faster Fully Homomorphic Encryption: Bootstrapping in Less Than 0.1 Seconds" - https://eprint.iacr.org/2016/870.pdf
+
+### Technical Resources
+- **OpenMined**: "Fully Homomorphic Encryption (FHE) Frameworks" - https://blog.openmined.org/brief-history-of-homomorphic-encryption-frameworks/
+- **Homomorphic Encryption Standardization**: "Homomorphic Encryption Standard" - https://homomorphicencryption.org/
+- **IACR ePrint Archive**: Cryptology ePrint Archive - https://eprint.iacr.org/
+
+### Implementation Libraries and Tools
+- **Microsoft SEAL**: https://github.com/Microsoft/SEAL
+- **IBM HElib**: https://github.com/homenc/HElib
+- **OpenFHE**: https://github.com/openfheorg/openfhe-development
+- **PALISADE**: https://palisade-crypto.org/
+- **HEAAN**: https://github.com/snucrypto/HEAAN
+- **Awesome-HE**: https://github.com/jonaschn/awesome-he
