@@ -66,6 +66,12 @@
 - **ZKP Solution**: Prove "X% shared DNA consistent with sibling relationship"
 - **Value**: Specific claims without broad genetic exposure
 
+### 5. Verifiable Consent and Policy Compliance
+**Scenario**: A researcher needs to ensure they are only accessing data for which explicit consent for a specific analysis type has been given.
+- **Traditional**: Relies on auditable paper/digital trails, but not cryptographically enforced at query time.
+- **ZKP Solution**: Individuals can generate ZKPs of their consent tokens or attributes. Data custodians can use ZKPs to prove to auditors that all data accessed adhered to specific consent policies, without revealing the data itself or individual identities.
+- **Value**: Enhances trust, enables dynamic consent, and provides cryptographic assurance of policy adherence in data sharing platforms.
+
 ## The Implementation Reality
 
 ### Current Limitations
@@ -114,4 +120,8 @@
 **Bottom Line**: ZKPs enable "selective disclosure" for genomics—the ability to prove specific genetic properties without revealing the entire genome. This unlocks new business models and research paradigms previously impossible.
 
 ---
-*ZKPs transform the genomic privacy question from "all or nothing" to "exactly what's needed."* 
+*ZKPs transform the genomic privacy question from "all or nothing" to "exactly what's needed."*
+
+---
+*Previous: [Chapter 4: Public Genome Datasets and Formats](04-public_genome_datasets.md)*
+*Next: [Chapter 6: Homomorphic Encryption (HE) in Genomics](06-homomorphic_encryption_he.md)*

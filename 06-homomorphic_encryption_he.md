@@ -45,10 +45,11 @@
 ### The Noise Problem (and Solution)
 **Challenge**: Each operation adds "noise" to ciphertext. Too much noise = undecryptable gibberish.
 
-**Bootstrapping**: The magical refresh button
-- Homomorphically evaluate the decryption function itself
-- Reduces noise without actually decrypting
-- **Cost**: Computationally expensive but enables unlimited computation
+**Bootstrapping**: The "magical refresh button" for FHE ciphertexts.
+- **Concept**: When noise in a ciphertext `ct` (encrypting message `m` under key `K1`) grows too large, bootstrapping essentially performs a homomorphic decryption. It takes the noisy `ct` and an encryption of its secret key `K1` (under a different key `K2`), then homomorphically evaluates the decryption circuit of the FHE scheme. This process effectively re-encrypts `m` under a new key (or the same key if K1=K2) but with the noise reset to a low, manageable level, as if `m` had just been freshly encrypted.
+- **Mechanism**: It homomorphically evaluates the decryption function itself on the noisy ciphertext.
+- **Outcome**: Reduces noise without actually revealing the plaintext message at any intermediate step on the server performing the computation.
+- **Cost**: Computationally very expensive, often the main performance bottleneck in deep FHE computations, but it's what enables unlimited computation depth.
 
 ## Under the Hood: The Math That Makes It Work
 
@@ -200,3 +201,7 @@
 - **PALISADE**: https://palisade-crypto.org/
 - **HEAAN**: https://github.com/snucrypto/HEAAN
 - **Awesome-HE**: https://github.com/jonaschn/awesome-he
+
+---
+*Previous: [Chapter 5: Zero-Knowledge Proofs (ZKPs) in Genomics](05-zero_knowledge_proofs_zkp.md)*
+*Next: [Chapter 6a: Mathematical Foundations of HE](06a-homomorhic_encryption_math_foundations.md)*

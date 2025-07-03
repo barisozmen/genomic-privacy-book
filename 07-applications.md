@@ -12,6 +12,7 @@
 - **Physician**: Gets actionable prescribing guidance
 - **Value Creation**: Higher patient adoption + regulatory compliance
 - **Market Size**: $7B+ pharmacogenomics market growing 8%+ annually
+- **User Enablement**: This model of selective disclosure is greatly enhanced by user-centric tools for managing genomic data and proofs, as explored in Chapter 11 on Genomic Self-Custody.
 
 ### 2. Clinical Trial Recruitment: Privacy-First Enrollment  
 **Business Model**: Encrypted patient matching platforms
@@ -19,6 +20,7 @@
 - **Sponsors**: Access larger, more diverse patient pools
 - **Value Creation**: Faster recruitment + higher participation rates
 - **Market Impact**: $69B clinical trial market with recruitment as #1 bottleneck
+- **User Enablement**: Privacy-preserving recruitment benefits immensely from individuals' ability to generate and share proofs of eligibility using genomic self-custody tools (see Chapter 11).
 
 ### 3. Genetic Counseling: Selective Disclosure for Risk Assessment
 **Business Model**: Risk-specific genetic consultations
@@ -46,7 +48,7 @@
 - **Capability**: Multi-institutional GWAS on encrypted data
 - **Impact**: Larger studies = stronger statistical power = faster discovery
 - **Customers**: Academic medical centers, pharmaceutical companies, biobanks
-- **Value Creation**: Research acceleration without privacy compromise
+- **Value Creation**: Research acceleration without privacy compromise. These concepts tie into the broader vision of Decentralized Genomic Economies, detailed in Chapter 7a.
 
 ### 3. Federated Learning: AI Models Across Encrypted Datasets
 **Business Model**: Privacy-preserving ML platform for genomics
@@ -60,7 +62,7 @@
 - **Data Owners**: Monetize genetic data without exposure
 - **Researchers**: Access larger, more diverse datasets
 - **Platform**: Takes transaction fees for privacy-preserving queries
-- **Market Unlock**: Currently untapped due to privacy concerns
+- **Market Unlock**: Currently untapped due to privacy concerns. Such markets are a key component of the Decentralized Genomic Economies discussed in Chapter 7a.
 
 ## Hybrid Solutions: ZKP + FHE for Maximum Power
 
@@ -77,6 +79,7 @@
 - **Market**: Healthcare organizations under regulatory scrutiny
 
 ## Implementation Readiness: From Lab to Market
+The journey from cryptographic theory to real-world genomic applications involves several stages, heavily dependent on the maturation of both the core technologies and the surrounding ecosystem. The practical realization of many applications discussed relies on significant advancements in performance (see Chapter 8) and the availability of robust developer tools (see Chapter 10).
 
 ### Ready Now (2024-2025)
 **ZKP Applications**:
@@ -137,4 +140,8 @@
 **Bottom Line**: ZKP and FHE applications in genomics are moving from research demonstrations to commercial products. The companies that nail the performance-privacy-usability triangle will capture the massive value currently trapped by privacy concerns.
 
 ---
-*Privacy-preserving genomics isn't just about protection—it's about enabling entirely new categories of medical innovation.* 
+*Privacy-preserving genomics isn't just about protection—it's about enabling entirely new categories of medical innovation.*
+
+---
+*Previous: [Chapter 6b: Startups Using FHE as Core Tech](06b-startups-using-fhe-as-core-tech.md)*
+*Next: [Chapter 7a: Decentralized Genomic Economies](07a-decentralized_genomic_economies.md)*

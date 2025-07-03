@@ -2,6 +2,8 @@
 
 *Why the future of privacy-preserving computation rests on centuries-old mathematical foundations*
 
+**Author's Note:** This chapter delves into the advanced mathematical concepts that form the bedrock of modern homomorphic encryption. While Chapter 6 provides a higher-level overview of FHE, this chapter is intended for readers seeking a deeper understanding of the cryptographic primitives and algebraic structures involved. A general appreciation of FHE's capabilities can be gained without mastering all details herein, but for practitioners and researchers in the field, this mathematical foundation is crucial.
+
 Homomorphic encryption is having its moment. From Apple's differential privacy to Meta's encrypted machine learning, the ability to compute on encrypted data without ever decrypting it is reshaping how we think about data privacy. But beneath the hype lies a beautiful mathematical edifice built on foundations that would make Euler proud.
 
 Here's the mathematical stack every practitioner needs to master.
@@ -103,4 +105,5 @@ Homomorphic encryption represents one of humanity's most ambitious mathematical 
 
 ---
 
-*Next: [Homomorphic Encryption in Practice](06-homomorphic_encryption_he.md) - Where theory meets implementation*
+*Previous: [Chapter 6: Homomorphic Encryption (HE) in Genomics](06-homomorphic_encryption_he.md)*
+*Next: [Chapter 6b: Startups Using FHE as Core Tech](06b-startups-using-fhe-as-core-tech.md)*

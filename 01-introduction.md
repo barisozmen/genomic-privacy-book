@@ -47,7 +47,10 @@ A future where:
 - Individuals control their genetic data with cryptographic precision
 - Innovation flourishes within trust frameworks
 
-**Bottom Line**: PETs transform genomic privacy from a constraint into a competitive advantage. The companies and researchers who master this will define the next era of precision medicine.
+**Bottom Line**: PETs transform genomic privacy from a constraint into a competitive advantage. This book will explore not only these core technologies but also the surrounding ecosystem, the engineering path to practical adoption, and the new economic models they may unlock. The companies and researchers who master this will define the next era of precision medicine.
 
 ---
-*Privacy isn't the enemy of genomic progress—it's the enabler.* 
+*Privacy isn't the enemy of genomic progress—it's the enabler.*
+
+---
+*Next: [Chapter 2: Genomic Privacy Concerns](02-genomic_privacy_concerns.md)*

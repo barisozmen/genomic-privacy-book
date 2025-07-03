@@ -35,9 +35,9 @@
 - **SRA**: Raw sequencing reads archive ([ncbi.nlm.nih.gov/sra](https://www.ncbi.nlm.nih.gov/sra))
 
 **Access Patterns**:
-- **Open Access**: Reference genomes, population frequencies
-- **Controlled Access**: Individual-level data requires authorization (dbGaP)
-- **Federated**: Data stays local, queries travel (emerging model)
+- **Open Access**: Reference genomes, population frequencies (e.g., 1000 Genomes, gnomAD aggregates).
+- **Controlled Access**: Individual-level data requires authorization through Data Access Committees (DACs), common for datasets like UK Biobank individual data or dbGaP.
+- **Federated**: An emerging model where data largely stays at its original institution. Queries or analysis scripts are sent to the data, and only aggregated or privacy-preserving results are returned. This model, strongly supported by PETs discussed later (see Chapters 5, 6, and 7a), aims to maximize data utility while minimizing data movement and direct exposure.
 
 ## File Format Essentials: The Language of Genomics
 
@@ -135,9 +135,9 @@ chr1   1000 rs123  A   G   100  PASS   AF=0.15   GT:AF   0/1:0.12 0/0:0.05 1/1:0
 ### The Privacy-Performance Tension
 
 **Current Reality**:
-- Useful research data requires individual-level information
-- Privacy regulations increasingly restrict data sharing
-- **Result**: Data silos limit research potential
+- Useful research data often requires individual-level information for maximum utility.
+- Privacy regulations (e.g., GDPR, HIPAA) and ethical concerns increasingly restrict direct sharing of such sensitive data.
+- **Result**: Valuable genomic data often remains siloed within institutions, limiting the scale and diversity of research studies. This book explores how advanced cryptographic techniques like Zero-Knowledge Proofs and Homomorphic Encryption (detailed in Chapters 5 and 6) offer robust solutions to this tension.
 
 **The PET Opportunity**:
 - Enable analysis on sensitive data without exposure
@@ -161,4 +161,8 @@ chr1   1000 rs123  A   G   100  PASS   AF=0.15   GT:AF   0/1:0.12 0/0:0.05 1/1:0
 **Bottom Line**: Public genomic datasets created the foundation. Private datasets hold the clinical value. PETs are the bridge that unlocks this trapped value at scale.
 
 ---
-*Data abundance without privacy solutions = innovation scarcity.* 
+*Data abundance without privacy solutions = innovation scarcity.*
+
+---
+*Previous: [Chapter 3: Privacy-Enhancing Technologies Overview](03-privacy_technologies.md)*
+*Next: [Chapter 5: Zero-Knowledge Proofs (ZKPs) in Genomics](05-zero_knowledge_proofs_zkp.md)*

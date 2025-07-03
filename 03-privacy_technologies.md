@@ -3,13 +3,13 @@
 ## The Privacy Spectrum: From Weak to Cryptographically Strong
 
 ### Traditional Approaches (Insufficient for Genomics)
-**k-Anonymity**: Ensure k identical records for any combination of quasi-identifiers
-- **Reality Check**: Genomic data is inherently quasi-identifying
-- **Failure Mode**: Works for age/zip code, breaks with genetic variants
+**k-Anonymity**: Ensure k identical records for any combination of quasi-identifiers.
+- **Reality Check**: Genomic data's high dimensionality means almost any few variants can become quasi-identifying. The "genomic beacon" problem illustrates this: queries for the presence of specific alleles, even in aggregated data, can inadvertently reveal information about participants if the allele is rare or linked to other known participant attributes.
+- **Failure Mode**: Effective for low-dimensional data like age/zip code, but quickly breaks down with genetic variants, making it trivial to re-identify individuals in "anonymized" genomic datasets.
 
-**Differential Privacy**: Add calibrated statistical noise
-- **Trade-off**: Privacy ↔ Data utility (often severe for genomic precision)
-- **Use Case**: Population-level statistics, not individual analysis
+**Differential Privacy**: Add calibrated statistical noise to query results to mask individual contributions.
+- **Trade-off**: While providing formal privacy guarantees, the amount of noise required to protect against linkage attacks with high-dimensional genomic data often renders the data unusable for precise medical or research applications (e.g., identifying rare variants or subtle genetic associations). The privacy-utility trade-off can be particularly severe for genomic precision.
+- **Use Case**: More suitable for population-level statistics or simple aggregate queries, less so for individual-level analysis or complex genomic computations requiring high fidelity.
 
 ### Advanced Techniques (The Real Solutions)
 
@@ -24,9 +24,10 @@
 - **Fully Homomorphic**: Arbitrary computation on encrypted data *(the holy grail)*
 
 **Trusted Execution Environments (TEEs)**
-- **Intel SGX, ARM TrustZone**: Hardware-isolated computation
-- **Trade-off**: Performance vs. trust in hardware manufacturers
-- **Reality**: Side-channel attacks remain a concern
+- **Examples**: Intel SGX, AMD SEV, ARM TrustZone provide hardware-isolated "enclaves" for computation.
+- **Trust Model**: Relies on trusting the hardware manufacturer to have correctly implemented the TEE and that the hardware itself is free from backdoors or exploitable flaws. The security guarantee is rooted in this trusted hardware base, not purely in mathematics like FHE/ZKP.
+- **Trade-off**: Can offer better performance than pure cryptographic PETs for some computations, but this comes at the cost of this hardware trust assumption.
+- **Reality**: Side-channel attacks (exploiting physical characteristics of the hardware during computation) and vulnerabilities in the TEE's microcode or supporting software remain ongoing concerns.
 
 ## The Genomics-Specific Challenge
 
@@ -84,4 +85,8 @@
 **Bottom Line**: PETs are transitioning from academic curiosities to essential infrastructure. The companies that nail the performance-privacy-usability triangle will capture the genomic data economy.
 
 ---
-*Privacy technology isn't overhead—it's the unlock mechanism for genomic value creation.* 
+*Privacy technology isn't overhead—it's the unlock mechanism for genomic value creation.*
+
+---
+*Previous: [Chapter 2: Genomic Privacy Concerns](02-genomic_privacy_concerns.md)*
+*Next: [Chapter 4: Public Genome Datasets and Formats](04-public_genome_datasets.md)*
