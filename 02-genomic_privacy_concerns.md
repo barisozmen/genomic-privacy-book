@@ -9,7 +9,7 @@ Genomic data differs from other health information—it is **inherently identifi
 
 1. **Rare Diseases/Variants** (<1% frequency): Narrow identification pools, especially in small/isolated populations
 2. **High Penetrance & Actionable Conditions**: Strong disease likelihood + required interventions = high stakes
-3. **Stigmatized Conditions**: Mental health, infectious disease predispositions increase discrimination risks
+3. **Stigmatized Conditions**: Mental health, infectious disease predispositions increase discrimination risks. e.g. HIV, hepatitis, Alzheimers, etc.
 4. **Population-Specific Variants**: Ethnic/geographic markers enable group-level identification and targeting
 5. **Data Context**: Small cohorts, rare disease datasets, linkable metadata amplify re-identification risks
 
@@ -21,7 +21,7 @@ Genomic data differs from other health information—it is **inherently identifi
 | **Rare Monogenic** | Cystic fibrosis, Huntington's, SMA | Carrier inference, community stigma, lifelong impact |
 | **Neurodegenerative** | Alzheimer's (APOE ε4), Parkinson's (LRRK2) | Late-onset psychological harm, population-specific variants |
 | **Mental Health** | Schizophrenia, bipolar disorder | High stigma, group discrimination potential |
-| **Pharmacogenomic** | HLA-B*57:01, CYP2C19 variants | Indirect health status revelation, treatment implications |
+| **Pharmacogenomic variants** | HLA-B*57:01, CYP2C19 variants | Indirect health status revelation, treatment implications |
 | **Ethnic-Specific** | Sickle cell, Tay-Sachs, β-thalassemia | Group stigmatization, targeted breaches |
 
 ## Allele Frequency Analysis: High-Stakes Examples
@@ -69,29 +69,6 @@ Genomic data differs from other health information—it is **inherently identifi
 
 **Regulatory Reality**: Current frameworks fail to address population-specific high-penetrance variants with ethnic stratification patterns.
 
-
-
-
-## Privacy-Enhancing Strategies
-
-### Technical Solutions
-- **Differential Privacy**: Add calibrated noise while preserving analytical value
-- **Secure Computation**: Homomorphic encryption, multi-party computation
-- **Federated Learning**: Distributed model training without data sharing
-- **Synthetic Data**: Artificial datasets mimicking statistical properties
-
-### Governance Framework
-- **Data Aggregation**: Larger, diverse populations to dilute rare variant impact
-- **Access Controls**: Tiered permissions, audit logs, enforceable data use agreements
-- **Ethical Oversight**: Independent review boards with genomics expertise
-- **Legal Compliance**: GDPR, HIPAA adherence; address GINA limitations
-- **Dynamic Consent**: Ongoing individual control over data use
-
-## Key Regulatory Gaps
-
-- **GINA limitations**: Excludes life, disability, long-term care insurance
-- **HIPAA challenges**: Safe harbor insufficient for genetic data
-- **Breach targeting**: 23andMe incident showed ethnic-specific attack vectors
 
 ## Bottom Line
 
