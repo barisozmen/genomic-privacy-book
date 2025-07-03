@@ -50,7 +50,7 @@ A future where:
 **Bottom Line**: PETs transform genomic privacy from a constraint into a competitive advantage. This book will explore not only these core technologies but also the surrounding ecosystem, the engineering path to practical adoption, and the new economic models they may unlock. The companies and researchers who master this will define the next era of precision medicine.
 
 ---
-*Privacy isn't the enemy of genomic progress—it's the enabler.*
+*Privacy is the enabler of genomic progress.*
 
 ---
 *Next: [Chapter 2: Genomic Privacy Concerns](02-genomic_privacy_concerns.md)*
