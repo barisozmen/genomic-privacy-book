@@ -39,7 +39,7 @@ Genomic data differs from other health information—it is **inherently identifi
   - Statistical power: >90% detection of 0.05 frequency differences
   - Effect sizes: OR 3-15 for heterozygotes/homozygotes
 
-**Why Extremely High Privacy Risk**:
+**Why High Privacy Risk**:
 - **Near-Deterministic**: APOE4/4 = distinct genetic form of Alzheimer's [^7^]
 - **Early Detection**: Plasma biomarkers abnormal 10+ years before symptoms
 - **No Prevention**: Currently no effective preventive interventions
@@ -60,7 +60,7 @@ Genomic data differs from other health information—it is **inherently identifi
   - Statistical power: >95% detection of population-specific variants
   - Effect sizes: OR 10-20 for breast cancer, OR 40-60 for ovarian cancer
 
-**Why Extremely High Privacy Risk**:
+**Why High Privacy Risk**:
 - **Near-Deterministic**: 60-85% lifetime cancer risk vs. 12-13% population baseline [^8^]
 - **Actionable but Invasive**: Prophylactic mastectomy/oophorectomy recommendations
 - **Population Targeting**: Enables ethnic-specific discrimination and breaches
