@@ -24,7 +24,32 @@ Genomic data differs from other health information—it is **inherently identifi
 | **Pharmacogenomic variants** | HLA-B*57:01, CYP2C19 variants | Indirect health status revelation, treatment implications |
 | **Ethnic-Specific** | Sickle cell, Tay-Sachs, β-thalassemia | Group stigmatization, targeted breaches |
 
+
 ## Allele Frequency Analysis: High-Stakes Examples
+
+### Private database query for pharma
+Drug discovery company 
+- desires -> to test their set of targets (variants) on big genome datasets (which they lack of)
+- constrained -> don't want to leak their set of targets
+
+BioBank
+- desires -> monetize their big genome data
+- constrained -> don't want to expose any of their data
+
+The Solution
+- Drug discovery company (DDC) will query BioBank datasets, satisfying both desires and constraints of both entities.
+- Flow
+	- 1) DDC generates public-private key pair
+	- 2) DDC encrypts its vector of targets
+		- ciphertext-of-targets = encr(targets)
+	- 3) DDC sends its ciphertext and public key to BioBank
+	- 4) BioBank encrypts its dataset with DDC's public key
+		- ciphertext-of-genomes = enc(genomes)
+	- 5) BioBank performs homomorphic operations
+		- f(ciphertext-of-targets, ciphertext-of-genomes) = ciphertext-of-result
+	- 6) BioBank sends back the encrypted result - ciphertext-of-result
+	- 7) DDC decrypts the result with its secret key
+		- decr(ciphertext-of-result, secret-key) = result
 
 ### APOE ε4 and Alzheimer's Disease
 **Definition**: Statistical analysis comparing variant frequencies across populations to identify disease associations and population structure. Uses large-scale datasets like Simons Genome Diversity Project (SGDP) with global population samples.
