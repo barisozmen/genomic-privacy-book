@@ -27,30 +27,6 @@ Genomic data differs from other health information—it is **inherently identifi
 
 ## Allele Frequency Analysis: High-Stakes Examples
 
-### Private database query for pharma
-Drug discovery company 
-- desires -> to test their set of targets (variants) on big genome datasets (which they lack of)
-- constrained -> don't want to leak their set of targets
-
-BioBank
-- desires -> monetize their big genome data
-- constrained -> don't want to expose any of their data
-
-The Solution
-- Drug discovery company (DDC) will query BioBank datasets, satisfying both desires and constraints of both entities.
-- Flow
-	- 1) DDC generates public-private key pair
-	- 2) DDC encrypts its vector of targets
-		- ciphertext-of-targets = encr(targets)
-	- 3) DDC sends its ciphertext and public key to BioBank
-	- 4) BioBank encrypts its dataset with DDC's public key
-		- ciphertext-of-genomes = enc(genomes)
-	- 5) BioBank performs homomorphic operations
-		- f(ciphertext-of-targets, ciphertext-of-genomes) = ciphertext-of-result
-	- 6) BioBank sends back the encrypted result - ciphertext-of-result
-	- 7) DDC decrypts the result with its secret key
-		- decr(ciphertext-of-result, secret-key) = result
-
 ### APOE ε4 and Alzheimer's Disease
 **Definition**: Statistical analysis comparing variant frequencies across populations to identify disease associations and population structure. Uses large-scale datasets like Simons Genome Diversity Project (SGDP) with global population samples.
 
@@ -95,6 +71,31 @@ The Solution
 **Regulatory Reality**: Current frameworks fail to address population-specific high-penetrance variants with ethnic stratification patterns.
 
 Beyond preventing misuse, robust genomic privacy unlocks significant positive potential. Widespread, proactive genetic screening for preventable or manageable conditions could become a public health norm if individuals trust that their data will remain secure and under their control. The fear of data exposure currently limits participation in beneficial research and the adoption of personalized preventative strategies.
+
+### Private database query for pharma
+Drug discovery company 
+- desires -> to test their set of targets (variants) on big genome datasets (which they lack of)
+- constrained -> don't want to leak their set of targets
+
+BioBank
+- desires -> monetize their big genome data
+- constrained -> don't want to expose any of their data
+
+The Solution
+- Drug discovery company (DDC) will query BioBank datasets, satisfying both desires and constraints of both entities.
+- Flow
+	- 1) DDC generates public-private key pair
+	- 2) DDC encrypts its vector of targets
+		- ciphertext-of-targets = encr(targets)
+	- 3) DDC sends its ciphertext and public key to BioBank
+	- 4) BioBank encrypts its dataset with DDC's public key
+		- ciphertext-of-genomes = enc(genomes)
+	- 5) BioBank performs homomorphic operations
+		- f(ciphertext-of-targets, ciphertext-of-genomes) = ciphertext-of-result
+	- 6) BioBank sends back the encrypted result - ciphertext-of-result
+	- 7) DDC decrypts the result with its secret key
+		- decr(ciphertext-of-result, secret-key) = result
+
 
 ## Bottom Line
 
