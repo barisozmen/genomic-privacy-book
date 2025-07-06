@@ -1,4 +1,4 @@
-# Genomic Privacy Concerns: A One-Page Guide
+# Genomic Privacy Concerns
 
 ## Why Genomic Data Is Uniquely Sensitive
 
